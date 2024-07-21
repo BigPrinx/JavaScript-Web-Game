@@ -1,0 +1,103 @@
+body {
+    background-color: #87CEEB; /* Sky blue background */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+canvas {
+    border: 1px solid #8B4513; /* Brown border */
+    display: block;
+    margin: 20px auto;
+    background-color: #87CEEB; /* Sky blue background */
+    width: 80%;
+    height: 60vh; /* Canvas size */
+    image-rendering: pixelated; /* Retro feel */
+}
+
+/* Button styles for larger buttons */
+button {
+    display: inline-block;
+    width: 80px; /* Larger buttons for easy tapping */
+    height: 80px;
+    font-size: 24px;
+    background-color: #8B4513; /* Brown background */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    line-height: 80px; /* Center text vertically */
+}
+
+button:hover {
+    background-color: #A0522D; /* Lighter brown */
+}
+
+#controls {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+#controls .direction-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between directional buttons */
+}
+
+#controls .direction-buttons .direction-button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Space between Left and Right buttons */
+}
+
+#upButton, #downButton, #leftButton, #rightButton {
+    width: 80px;
+    height: 80px;
+}
+
+#restartButton, #pausePlayButton {
+    width: 120px; /* Wider button for clarity */
+    height: 80px;
+    font-size: 24px;
+}
+
+#pausePlayButton {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    margin-bottom: 20px;
+}
+
+#restartButton {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#hud .stat {
+    margin-bottom: 5px;
+}
+
+/* Prevent zooming on double-tap for mobile */
+html, body {
+    touch-action: manipulation;
+}

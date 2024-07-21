@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="controls">
+        <div class="direction-buttons">
+            <div class="direction-button">
+                <button id="upButton">↑</button>
+            </div>
+            <div class="direction-button">
+                <button id="leftButton">←</button>
+                <button id="rightButton">→</button>
+            </div>
+            <div class="direction-button">
+                <button id="downButton">↓</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="pausePlayButton">Pause</button>
+    <button id="restartButton">Restart</button>
+
+    <!-- Heads-Up Display (HUD) -->
+    <div id="hud">
+        <div class="stat" id="lives">Lives: 3</div> <!-- Updated to initial lives -->
+        <div class="stat" id="level">Level: 1</div> <!-- Added level display -->
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
